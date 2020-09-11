@@ -1,0 +1,429 @@
+body
+{
+	background-color: #000;
+}
+
+.jumbotron
+{
+	background-color: #004A80;
+	border-radius: 0px;
+	color: #FFF;
+	height: 444px;
+	padding-top: 50px;
+	margin-bottom: 0px;
+}
+
+.navbar
+{
+	background-color: #004A80;
+	padding-right:230px;
+	padding-left:230px;
+}
+
+.colourChrome
+{
+	color: #F6BC25;
+}
+
+.colourBlue
+{
+	color: #004A80 !important;
+}
+
+.colourGray
+{
+	color: #4A4A4A;
+}
+
+.colourBlack
+{
+	color: #000000;
+}
+
+.btnGo
+{
+	background-image: linear-gradient(225deg, #F2DA56 0%, #F6BC25 100%);
+	box-shadow: 0 3px 0 0 #A6953B, inset 0 1px 0 0 #FFFFFF;
+	border-radius: 6px;
+	border-radius: 6px;
+	font-size: 24px;
+	color: #004A80;
+	letter-spacing: 1px;
+	text-align: center;
+	height: 70px;
+}
+
+.inputEmail
+{
+	background: #FFFFFF;
+	box-shadow: inset 0 -1px 4px 0 rgba(0,0,0,0.20);
+	border-radius: 3px;
+	border-radius: 3px;
+	height: 70px;
+	font-size: 16px;
+	font-weight: 600;
+}
+.font52px
+{
+	font-size: 52px;
+}
+
+.font24px
+{
+	font-size: 24px;
+}
+
+.font22px
+{
+	font-size: 22px;
+}
+
+.font16px
+{
+	font-size: 16px;
+}
+
+.bold600
+{
+	font-weight: 600;
+}
+
+.bodyBlock, .resultBlock
+{
+	background-image: linear-gradient(0deg, #E6E6E6 0%, #FFFFFF 100%);
+}
+
+.numCircle
+{
+	background-color: #004A80;
+	text-align:center;
+	border-radius: 50%;
+	color: #F6BC25;
+	font-weight: bolder;
+}
+
+h4.colourBlue
+{
+    font-weight: 700;
+}
+
+.customFooter
+{
+	background-color: #FFF;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.footerText
+{
+	color: #999;
+	font-size: 15px;
+}
+
+.posCenter
+{
+	/*position: fixed;
+    transform: translate(-50%, -51%);*/
+	font-weight: 700;
+	height: 30px;
+}
+
+div.colourBlack.bold600, .headerText
+{
+	line-height: 24px;
+}
+
+.resultBox
+{
+	background: #FFFFFF;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+	border-radius: 30px;
+	border-radius: 30px;
+	padding: 40px;
+}
+
+.personHead, .detailsHead
+{
+	font-size: 32px;
+	color: #004A80;
+	letter-spacing: 0;
+}
+
+.resultDetails h4
+{
+	font-size: 22px;
+}
+
+.personText, .addressText, .numbersText, .emailText, .relativesText
+{
+	font-size: 18px;
+	color: #000000;
+	letter-spacing: 0;
+	line-height: 26px;
+	min-height: 60px;
+}
+#errorMsg
+{
+	background-color:#004A80;
+	padding-top: 50px;
+}
+#errorMsg .alert
+{
+	margin-bottom: 0px;
+}
+
+
+/* preloader classes */
+.preloadOuter
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(255,255,255,0.5);
+	z-index: 2050;
+}
+ 
+.loader
+{
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	border: 12px solid #004A80;
+	border-radius: 50%;
+	border-top: 12px solid #F6BC25;
+	width: 120px;
+	height: 120px;
+	-webkit-animation: spin 2s linear infinite; /* Safari */
+	animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+/* preloader classes */
+
+
+/*  small devices (tablets, 768px and up) */
+@media (min-width: 320px)
+{
+	.container
+	{
+		padding-right: 0px;
+		padding-left: 0px;
+	}
+	.jumbotron
+	{
+		padding-right: 15px;
+		padding-left: 15px;
+		height: 500px;
+	}
+	.navbar
+	{
+		padding: 0px 15px;
+	}
+	.mainHeader
+	{
+		font-size: 38px;
+		margin-bottom: 10px;
+	}
+	.headerText
+	{
+		font-size: 18px;
+	}
+	.inputEmail, .btnGo
+	{
+		height: 50px;
+	}
+	.inputEmail
+	{
+		margin-bottom: 10px;
+	}
+	.bodyBlock
+	{
+		padding-top: 30px;
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+	#errorMsg
+	{
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+	.numCircle
+	{
+		height: 50px;
+		width: 50px;
+		font-size: 26px;
+		line-height: 50px;
+	}
+	.customFooter
+	{
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+	.posCenter
+	{
+		height: 130px;
+	}
+	div.colourBlack.bold600, .headerText
+	{
+		line-height: 22px;
+	}
+	.resultBlock .headerText, .resultBox
+	{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.resultBox
+	{
+		margin-left: 15px;
+		margin-right: 15px;
+		padding: 25px 15px;
+	}
+	.loader
+	{
+		left: 30%;
+	}
+}
+/*  Medium devices (tablets, 768px and up) */
+
+/*  Medium devices (tablets, 768px and up) */
+@media (min-width: 768px)
+{
+	.container
+	{
+		max-width: 768px;
+	}
+	.jumbotron
+	{
+		padding-right: 15px;
+		padding-left: 15px;
+		height: 360px;
+	}
+	.navbar
+	{
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+	.mainHeader
+	{
+		font-size: 48px;
+		margin-bottom: 15px;
+		line-height: 44px;
+	}
+	.headerText
+	{
+		font-size: 20px;
+		letter-spacing: -0.25px;
+	}
+	.bodyBlock
+	{
+		padding-top: 30px;
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+		#errorMsg
+	{
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+	.numCircle
+	{
+		height: 63px;
+		width: 63px;
+		font-size: 33px;
+		line-height: 63px;
+	}
+	.customFooter
+	{
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+	.posCenter
+	{
+		height: 58%;
+	}
+	.resultBlock .navbar
+	{
+		padding: 15px !important;
+	}
+	.loader
+	{
+		left: 40%;
+	}
+}
+/*  Medium devices (tablets, 768px and up) */
+
+/* lg */
+@media (min-width: 1200px)
+{
+	.container {
+		max-width: 1440px !important;
+	}
+	.navbar
+	{
+		padding: 10px 230px;
+	}
+	.jumbotron
+	{
+		padding-right: 230px;
+		padding-left: 230px;
+		height: 360px;
+	}
+	.mainHeader
+	{
+		font-size: 52px;
+		margin-bottom: 15px;
+	}
+	.headerText
+	{
+		font-size: 22px;
+	}
+	.bodyBlock
+	{
+		padding-top: 30px;
+		padding-right: 230px;
+		padding-left: 230px;
+	}
+	#errorMsg
+	{
+		padding-right: 230px;
+		padding-left: 230px;
+	}
+	.numCircle
+	{
+		height: 90px;
+		width: 90px;
+		font-size: 48px;
+		line-height: 90px;
+	}
+	.customFooter
+	{
+		padding-right: 130px;
+		padding-left: 130px;
+	}
+	.resultBlock
+	{
+		padding-right: 230px;
+		padding-left: 230px;
+	}
+	.posCenter
+	{
+		height: 100%;
+	}
+	.loader
+	{
+		left: 50%;
+	}
+}
+/* lg */

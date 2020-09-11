@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="images/favicon.ico">
+
+    <title>Demo Project</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/starter-template/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- custom styles -->
+    <link href="css/customStyles.css" rel="stylesheet">
+
+</head>
+
+<body onload="onPageLoad()">
+
+    <main role="main" class="container">
+
+        <div class="navbar">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <img src="images/Logo@2x.png" width="173" height="25" />
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <img src="images/icn_person@2x.png" width="23" height="23" class="mr-2" />
+                <img src="images/icn_search@2x.png" width="23" height="23" />
+            </form>
+        </div>
+
+        <!-- resultBlock -->
+        <div class="resultBlock pb-5 pt-5" id="resultBlock">
+
+            <h1 class="text-center mainHeader colourBlue">Result</h1>
+
+            <div class="headerText colourGray pb-5 text-center">
+                Look at the result below to see the details of the person you’re searched for.
+            </div>
+
+            <div class="resultBox">
+                <div class="row">
+                    <div class="col-md-2 d-none d-sm-block">
+                        <div class="numCircle" style="line-height: 73px;">
+                            <img src="images/icn_person@2x.png" width="45" height="50" />
+                        </div>
+                    </div>
+                    <div class="col-md-10 col-sm-12">
+                        <h4 class="personHead" id="personName">John Smith</h4>
+                        <div class="personText form-group" id="personInfo">Lorem ipsum dolor sit amet, consectetur
+                            adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+
+                        <div class="row resultDetails">
+                            <div class="col-md-6 col-sm-12">
+                                <h4 class="detailsHead">Address</h4>
+                                <div class="addressText form-group" id="addressContent">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <h4 class="detailsHead">Phone Numbers</h4>
+                                <div class="numbersText form-group colourBlue" id="phoneContent"></div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <h4 class="detailsHead">Email</h4>
+                                <div class="emailText form-group" id="emailContent"></div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <h4 class="detailsHead">Relatives</h4>
+                                <div class="relativesText form-group" id="relContent"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- resultBlock -->
+
+        <!-- error msg -->
+        <div id="errorMsg">
+            <div class="alert alert-warning bold600 text-center">Sorry! No results found. :(</div>
+        </div>
+        <!-- error msg -->
+
+        <!-- jumbotron -->
+        <div class="jumbotron" id="jumbotron">
+
+            <h1 class="text-center mainHeader" id="jumboH1">Search Any Email Address</h1>
+
+            <h3 class="text-center headerText mb-4" id="jumboHead">
+                <span class="colourChrome">Start Here</span> - Look up the owner's name, photos and online profiles. See
+                what you find!
+            </h3>
+
+            <div class="row form-group">
+                <div class="col-md-10 col-sm-12">
+                    <input type="text" placeholder="Email" class="inputEmail form-control" id="emailInput" />
+                </div>
+                <div class="col-md-2 col-sm-12">
+                    <button class="btn btn-block btnGo" onclick="getResults()">
+                        GO!
+                    </button>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="d-inline">
+                    <img src="images/lock@2x.png" width="15" height="19" />
+                </div>
+                <div class="d-inline ml-1">
+                    <span class="colourChrome font16px bold600"> Enter Any Email Address. They won't be notified.</span>
+                </div>
+            </div>
+
+        </div>
+        <!-- jumbotron -->
+
+        <!-- bodyBlock -->
+        <div class="bodyBlock" id="bodyBlock">
+            <h1 class="text-center mainHeader colourBlue">Reverse Email Lookup</h1>
+
+            <div class="headerText colourGray mb-5">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat.
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 col-sm-12 form-group">
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="numCircle">1</div>
+                        </div>
+                        <div class="numContent col-9">
+                            <h4 class="colourBlue">Lorem Ipsum</h4>
+                            <div class="colourBlack bold600">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 form-group">
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="numCircle">2</div>
+                        </div>
+                        <div class="numContent col-9">
+                            <h4 class="colourBlue">Lorem Ipsum</h4>
+                            <div class="colourBlack bold600">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 form-group">
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="numCircle">3</div>
+                        </div>
+                        <div class="numContent col-9">
+                            <h4 class="colourBlue">Lorem Ipsum</h4>
+                            <div class="colourBlack bold600">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 form-group">
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="numCircle">4</div>
+                        </div>
+                        <div class="numContent col-9">
+                            <h4 class="colourBlue">Lorem Ipsum</h4>
+                            <div class="colourBlack bold600">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 form-group">
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="numCircle">5</div>
+                        </div>
+                        <div class="numContent col-9">
+                            <h4 class="colourBlue">Lorem Ipsum</h4>
+                            <div class="colourBlack bold600">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 form-group">
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="numCircle">6</div>
+                        </div>
+                        <div class="numContent col-9">
+                            <h4 class="colourBlue">Lorem Ipsum</h4>
+                            <div class="colourBlack bold600">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- bodyBlock -->
+
+        <footer class="customFooter">
+            <div class="row">
+                <div class="col-md-9 col-sm-12 footerText">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.
+                </div>
+                <div class="col-md-3 col-sm-12 text-center">
+                    <span class="colourBlue posCenter">Terms | Privacy</span>
+                </div>
+            </div>
+        </footer>
+
+        <div class="preloadOuter" id="preloader">
+            <div class="loader"></div>
+        </div>
+    </main>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="js/popper.min.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+
+	<script type="text/javascript">
+
+		var _isPageLoaded = true;
+		var _result="";
+		
+		function onPageLoad(){
+			document.getElementById("jumbotron").style.display = "block";
+			document.getElementById("bodyBlock").style.display = "block";
+			document.getElementById("resultBlock").style.display = "none";
+			document.getElementById("errorMsg").style.display = "none";
+			
+			document.getElementById("preloader").style.display = "none";
+			
+			document.getElementById("jumboH1").innerHTML = "Search Any Email Address";
+			document.getElementById("jumboHead").innerHTML = "<span class='colourChrome'>Start Here</span> - Look up the owner's name, photos and online profiles. See what you find!";
+		}
+
+		function getResults()
+		{
+			_isPageLoaded = false;
+			
+			document.getElementById("preloader").style.display = "block";
+
+			document.getElementById("bodyBlock").style.display = "none";
+			
+			document.getElementById("jumboH1").innerHTML = "Can’t Find The Right Person?";
+			document.getElementById("jumboHead").innerHTML = "<span class='colourChrome'>Try again</span> - Make a new search";
+			
+			var _strEmail = document.getElementById("emailInput").value;
+			
+			// Create a request variable and assign a new XMLHttpRequest object to it.
+			var request = new XMLHttpRequest();
+
+			// Open a new connection, using the GET request on the URL endpoint
+			request.open("GET", "https://cors-anywhere.herokuapp.com/https://ltv-data-api.herokuapp.com/api/v1/records.json?email="+_strEmail, true);
+
+			request.onload = function () {
+			  if (request.status >= 200 && request.status < 400) {
+				//console.log("got response : ("+this.response+")");
+				if (this.response != '[]')
+				{
+					//console.log("success !"+this.response);
+					_result = JSON.parse(this.response);
+					showResults();
+				} else {
+					//console.log('blank error');
+					showErrorMsg();
+				}
+			  } else {
+				//console.log('error');
+				showErrorMsg();
+			  }
+			}
+
+			// Send request
+			request.send();
+		}
+		
+		function showResults()
+		{
+			document.getElementById("preloader").style.display = "none";
+			document.getElementById("errorMsg").style.display = "none";
+			document.getElementById("resultBlock").style.display = "block";
+			
+			//personName addressContent phoneContent emailContent relContent
+			document.getElementById("personName").innerHTML = _result.first_name+" "+_result.last_name;
+			document.getElementById("addressContent").innerHTML = _result.address;
+			document.getElementById("phoneContent").innerHTML = _result.phone_numbers.join("<br/>");
+			document.getElementById("emailContent").innerHTML = _result.email;
+			document.getElementById("relContent").innerHTML = _result.relatives.join("<br/>");
+			
+		}
+		
+		function showErrorMsg()
+		{
+			document.getElementById("preloader").style.display = "none";
+			document.getElementById("errorMsg").style.display = "block";
+			document.getElementById("resultBlock").style.display = "none";
+		}
+	</script>
+
+
+</body>
+
+</html>
